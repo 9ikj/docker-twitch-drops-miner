@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  twitch-drops-miner:
+    container_name: twitch-drops-miner
+    image: 9ikj/twitch-drops-miner:latest
+    volumes:
+      - ./config:/TwitchDropsMiner/config
+    ports:
+      - 5900:5900 #VNC_LISTENING_PORT
+      # - 5800:5800 #WEB_LISTENING_PORT
+    environment:
+      - VNC_PASSWORD=yourvncpassword
