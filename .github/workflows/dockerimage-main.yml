@@ -24,6 +24,6 @@ jobs:
         HUB_KEY: ${{ secrets.DOCKER_TOKEN }}
       run: |
         docker login -u $HUB_NAME -p $HUB_KEY
-        docker build . --pull --no-cache --tag 9ikj/twitch-drops-miner:latest
+        docker build . --pull --no-cache --build-arg COMMIT_ID=$(git rev-parse --short HEAD) --tag 9ikj/twitch-drops-miner:latest
 
         docker push 9ikj/twitch-drops-miner:latest

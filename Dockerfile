@@ -1,12 +1,13 @@
 # Pull base image.
 FROM jlesage/baseimage-gui:ubuntu-22.04-v4
 
-MAINTAINER fireph
+LABEL org.opencontainers.image.authors="admin@9ikj.cn"
+ARG COMMIT_ID
 
 # Environment
 ENV LANG=en_US.UTF-8
 ENV KEEP_APP_RUNNING=1
-ENV TDM_VERSION_TAG 5dea41a
+ENV TDM_VERSION_TAG ${COMMIT_ID}
 ENV APP_ICON_URL https://raw.githubusercontent.com/DevilXD/TwitchDropsMiner/master/appimage/pickaxe.png
 
 # Install Twitch Drops Miner
