@@ -12,7 +12,7 @@ ENV APP_ICON_URL https://raw.githubusercontent.com/DevilXD/TwitchDropsMiner/mast
 
 # Install Twitch Drops Miner
 RUN apt-get update -y
-RUN apt-get install -y wget unzip libc6 gir1.2-appindicator3-0.1 fonts-noto-color-emoji 
+RUN apt-get install -y wget unzip libc6 gir1.2-ayatanaappindicator3-0.1 fonts-noto-color-emoji 
 RUN wget -P /tmp/ https://github.com/Windows200000/TwitchDropsMiner-updated/releases/download/v15.2.0/Twitch.Drops.Miner.Linux.PyInstaller.zip
 RUN mkdir /TwitchDropsMiner
 RUN unzip -p /tmp/Twitch.Drops.Miner.Linux.PyInstaller.zip "Twitch Drops Miner/Twitch Drops Miner (by DevilXD)" >/TwitchDropsMiner/TwitchDropsMiner
