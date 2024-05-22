@@ -3,7 +3,7 @@ version: '3'
 services:
   twitch-drops-miner:
     container_name: twitch-drops-miner
-    image: 9ikj/twitch-drops-miner:latest
+    image: 9ikj/twitch-drops-miner:debain
     volumes:
       - ./config:/TwitchDropsMiner/config
     ports:
