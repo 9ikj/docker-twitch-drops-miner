@@ -21,11 +21,13 @@ RUN rm -rf /tmp
 
 # Link config folder files
 RUN mkdir /TwitchDropsMiner/config
+
 RUN ln -s /TwitchDropsMiner/config/settings.json /TwitchDropsMiner/settings.json
 RUN ln -s /TwitchDropsMiner/config/cookies.jar /TwitchDropsMiner/cookies.jar
 
 # Make sure permissions are gonna work
 RUN chmod -R 777 /TwitchDropsMiner
+RUN chown app:app /TwitchDropsMiner/config
 
 # Copy the start script.
 COPY startapp.sh /startapp.sh
@@ -37,5 +39,3 @@ RUN install_app_icon.sh "$APP_ICON_URL"
 # Set the name/version of the application.
 RUN set-cont-env APP_NAME "Twitch Drops Miner"
 RUN set-cont-env APP_VERSION "$TDM_VERSION_TAG"
-
-VOLUME [ "/TwitchDropsMiner/config" ]
