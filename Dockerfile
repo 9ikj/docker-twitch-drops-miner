@@ -37,3 +37,5 @@ RUN install_app_icon.sh "$APP_ICON_URL"
 # Set the name/version of the application.
 RUN set-cont-env APP_NAME "Twitch Drops Miner"
 RUN set-cont-env APP_VERSION "$TDM_VERSION_TAG"
+
+VOLUME [ "/TwitchDropsMiner/config" ]
