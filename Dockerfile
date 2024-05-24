@@ -27,7 +27,6 @@ RUN ln -s /TwitchDropsMiner/config/cookies.jar /TwitchDropsMiner/cookies.jar
 
 # Make sure permissions are gonna work
 RUN chmod -R 777 /TwitchDropsMiner
-RUN chown app:app /TwitchDropsMiner/config
 
 # Copy the start script.
 COPY startapp.sh /startapp.sh
