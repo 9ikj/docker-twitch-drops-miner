@@ -9,6 +9,8 @@ on:
       - ".github/workflows/dockerimage-main.yml"
       - "Dockerfile"
       - "startapp.sh"
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
   twitch-drops-miner:
