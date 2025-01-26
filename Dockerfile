@@ -1,5 +1,5 @@
 # Pull base image.
-FROM jlesage/baseimage-gui:ubuntu-24.04
+FROM jlesage/baseimage-gui:ubuntu-24.04-v4
 
 LABEL org.opencontainers.image.authors="admin@9ikj.cn"
 ARG COMMIT_ID
