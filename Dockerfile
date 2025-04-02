@@ -33,7 +33,7 @@ COPY startapp.sh /startapp.sh
 RUN chmod +x /startapp.sh
 
 # Generate and install favicons
-RUN install_app_icon.sh --no-tools-install "$APP_ICON_URL"
+RUN install_app_icon.sh "$APP_ICON_URL"
 
 # Set the name/version of the application.
 RUN set-cont-env APP_NAME "Twitch Drops Miner"
